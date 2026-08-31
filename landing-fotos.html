@@ -469,6 +469,7 @@ src="https://www.facebook.com/tr?id=1382594180017168&ev=PageView&noscript=1"
       entries.forEach(e=>{
         if(e.isIntersecting){
           fbq('trackCustom','VioPrecio');
+          gtag('event', 'VioPrecio');
           obsPrecio.disconnect();
         }
       });
@@ -479,6 +480,7 @@ src="https://www.facebook.com/tr?id=1382594180017168&ev=PageView&noscript=1"
   function openModal(){
     document.getElementById('modalOverlay').classList.add('open');
     fbq('trackCustom', 'AbrioModal');
+    gtag('event', 'AbrioModal');
   }
   function closeModal(){
     document.getElementById('modalOverlay').classList.remove('open');
@@ -509,6 +511,7 @@ src="https://www.facebook.com/tr?id=1382594180017168&ev=PageView&noscript=1"
       console.warn('Firebase no cargó — el lead no se guardó, pero se continúa a WhatsApp.');
     }
     fbq('track', 'Lead');
+    gtag('event', 'Lead');
     // =====================================================================
 
     // El mensaje de WhatsApp queda igual de limpio, sin el número incluido
